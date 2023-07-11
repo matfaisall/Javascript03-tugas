@@ -18,7 +18,7 @@ async function processData(day) {
   try {
     console.log("Mulai : menggunakan try catch");
     const result = await cekHariKerja(day);
-    console.log(result);
+    console.log(`${result} adalah hari kerja`);
   } catch (error) {
     console.log(error.message);
   }
@@ -29,5 +29,5 @@ processData("senin")
     console.log("proses selesai");
   })
   .catch((error) => {
-    console.log("terdapat sebuah kesalahan", error);
+    console.log(error.message);
   });
